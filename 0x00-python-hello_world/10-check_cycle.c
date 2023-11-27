@@ -7,18 +7,20 @@
  * Return: 0 if zero cycle, 1 if cycle exist.
  */
 
-int check_cycle(listint_t *list) {
+int check_cycle(listint_t *list)
+{
 	listint_t *slow = list->next;
 	listint_t *fast = list->next->next;
 
-    if (list == NULL || list->next == NULL) {
-	return (0);
-    }
-
-    while (slow && fast && fast->next) {
-	if (slow == fast) {
-		return (1);
+	if (list == NULL || list->next == NULL)
+	{
+		return (0);
 	}
+
+	while (slow && fast && fast->next)
+	{
+	if (slow == fast)
+		return (1);
 
 	slow = slow->next;
 	fast = fast->next->next;
