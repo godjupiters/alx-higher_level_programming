@@ -4,10 +4,10 @@
 
 
 class Square:
-"""Square function"""
+    """Square function"""
 
     def __init__(self, size):
-        """Initialization
+        """Initialization of square
 
         Args:
             size (int): variable holding size of square
