@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 
+"""Define class"""
+
+
 class Square:
     """Represents a square with a given size."""
 
-    def __init__(self, size=1):  # Set a default size of 1
+    def __init__(self, size=1):
         """Initializes the square.
 
         Args:
@@ -18,9 +21,8 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        self._size = size  # Use single underscore for internal attribute
+        self._size = size
 
     def area(self):
         """Calculates and returns the area of the square."""
-        return self._size * self._size  # Access the correct attribute name
-
+        return self._size * self._size
