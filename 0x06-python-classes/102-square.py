@@ -2,6 +2,7 @@
 
 """Define Class"""
 
+
 class Square:
     """Represents a square with a given size."""
 
