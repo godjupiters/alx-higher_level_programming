@@ -3,7 +3,6 @@
 """Define class"""
 
 
-
 class Square:
     """ Representing Function"""
 
