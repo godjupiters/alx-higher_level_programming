@@ -1,23 +1,26 @@
 #!/usr/bin/python3
 
-"""Define class"""
-
-
 class Square:
-    """Represent function"""
+    """Represents a square with a given size."""
 
-    def __init__(self, size=0):
-         """Initialization of function
+    def __init__(self, size=1):  # Set a default size of 1
+        """Initializes the square.
 
         Args:
-            size (int): variable holding size
+            size (int, optional): The size of the square's side. Defaults to 1.
+
+        Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is less than 0.
         """
+
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        elif size < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self._size = size  # Use single underscore for internal attribute
 
     def area(self):
-        """Return Value"""
-        return (self.__size * self.__size)
+        """Calculates and returns the area of the square."""
+        return self._size * self._size  # Access the correct attribute name
+
