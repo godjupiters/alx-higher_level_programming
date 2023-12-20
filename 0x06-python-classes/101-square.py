@@ -1,10 +1,19 @@
 #!/usr/bin/python3
 
+"""Define Class"""
 
 
 class Square:
+    """Represents a square with a given size and position."""
 
     def __init__(self, size=0, position=(0, 0)):
+        """
+        Initializes the square with the given size and position.
+
+        Args:
+            size (int, optional): The initial size of the square's side.
+            position (tuple, optional): The initial position of the square.
+        """
         self.size = size
         self.position = position
 
@@ -34,9 +43,13 @@ class Square:
         self.__position = value
 
     def area(self):
+        """Calculates and returns the area of the square."""
         return (self.__size * self.__size)
 
     def my_print(self):
+        """
+        Prints a visual representation of the square.
+        """
         if self.__size == 0:
             print("")
             return
@@ -48,6 +61,9 @@ class Square:
             print("")
 
     def __str__(self):
+        """
+        Returns a string representation of the square, similar to my_print.
+        """
         if self.__size != 0:
             [print("") for z in range(0, self.__position[1])]
         for z in range(0, self.__size):
