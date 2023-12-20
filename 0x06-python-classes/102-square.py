@@ -10,7 +10,7 @@ class Square:
         Initializes the square with the given size.
 
         Args:
-            size (int, optional): The initial size of the square's side. Defaults to 0.
+            size (int, optional): The initial size of the square's side.
         """
         self.size = size
 
